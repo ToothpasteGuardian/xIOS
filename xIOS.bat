@@ -52,6 +52,9 @@ echo Area7 : ggroupsloading
 echo Area8 : ggroups
 echo Area9 : TAA
 echo Area10 : shuttingdown
+echo Area11 : console
+echo Area12 : ggroupsunlocked
+echo Area13 : TAAunlocked
 echo.
 echo That's all the areas I have currently created.
 echo Now type out the area you want to go to.
@@ -87,6 +90,15 @@ if "%areagoto%" == "Area9" (
 )
 if "%areagoto%" == "Area10" (
      goto shuttingdown
+)
+if "%areagoto%" == "Area11" (
+     goto console
+)
+if "%areagoto%" == "Area12" (
+     goto ggroupsunlocked
+)
+if "%areagoto%" == "Area13" (
+     goto TAAunlocked
 )
 
 @REM No valid command entered.
@@ -439,19 +451,68 @@ if "%chatroom%" == "leave" (
      ping localhost -n 5 >nul
 	 goto dir_apps
 )
+if "%chatroom%" == "console" (
+     echo.
+	 echo Opening "console"
+     ping localhost -n 5 >nul
+	 goto console
+)
 
 @REM No valid command entered.
 @echo No command entered.
 timeout 3 /nobreak > nul
-goto main
+goto ggroups
+
+:console
+cls
+echo Please enter a command.
+echo.
+
+set /p answerconsole=
+
+if "%answerconsole%" == "download chat assistant" (
+     echo.
+	 echo Transfering visual display to "GGROUPS.DOWNLOAD.CHATA.VODS"
+     ping localhost -n 5 >nul
+	 goto chatassistant
+)
+if "%answerconsole%" == "help" (
+     echo.
+	 echo - ALL COMMANDS -
+	 echo.
+	 echo download chat assistant
+	 echo.
+	 echo go back
+	 echo.
+	 pause
+	 goto console
+)
+if "%answerconsole%" == "go back" (
+     goto ggroups
+)
+
+@REM No valid answer chosen.
+@echo No valid answer chosen.
+timeout 3 /nobreak > nul
+goto console
+
+:chatassistant
+cls
+echo Downloading chat assistant v3.0.1
+ping localhost -n 3 >nul
+echo Download finished.
+echo Transfering visual display to
+echo "GGROUPS.VODS"
+ping localhost -n 3 >nul
+goto ggroupsunlocked
 
 :TAA
 cls
 
 set lines=10
 
-set "line1=[ You're listening to #talk-about-anything ]"
-set "line2=--------------------------------------------"
+set "line1=[ Recent chat activiy from #talk-about-anything ]"
+set "line2=--------------------------------------------------"
 set "line3=                  Lmao nice one -dr. thiccums"
 set "line4=                            Thanks -mike65893"
 set "line5=[ Delusionaldrawsss has joined ]"
@@ -469,9 +530,8 @@ for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 echo.
 echo - ATTENTION USER -
 echo.
-echo You are missing a vital file
-echo called "CHAT ASSISTANT" 
-echo you are now being removed from
+echo "CHAT ASSISTANT" Has failed. Please redownload.
+echo You are now being removed from
 echo #talk-about-anything so no 
 echo more errors continue flooding the
 echo console.
@@ -493,6 +553,145 @@ for /L %%b in (1,4,%delay%) do rem
 if "%letter%"=="" echo.&goto :EOF
 set /a num+=1
 goto type
+
+:ggroupsunlocked
+title --- Ggroups -- Chatting application --------
+cls
+echo.
+echo - List of all chatrooms -
+echo.
+echo #talk-about-anything -OPEN-
+echo.
+echo #gaming -CLOSED-
+echo.
+echo #school -CLOSED-
+echo.
+echo #technology -CLOSED-
+echo.
+echo #plants -CLOSED-
+echo.
+echo #pets -CLOSED-
+echo.
+echo #hacking -CLOSED-
+echo.
+echo.
+echo - To be made -
+echo.
+
+set /p chatroom=command:
+
+if "%chatroom%" == "talk about anything" (
+     goto TAAunlocked
+)
+if "%chatroom%" == "gaming" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "school" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "technology" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "plants" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "pets" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "hacking" (
+     echo.
+	 echo - ATTENTION -
+	 echo.
+	 echo This chatroom is closed for
+	 echo maintenance. Come back later.
+     ping localhost -n 5 >nul
+	 goto ggroups
+)
+if "%chatroom%" == "leave" (
+     echo.
+	 echo Closing "ggroups"...
+     ping localhost -n 5 >nul
+	 goto dir_apps
+)
+if "%chatroom%" == "console" (
+     echo.
+	 echo Opening "console"
+     ping localhost -n 5 >nul
+	 goto console
+)
+
+@REM No valid command entered.
+@echo No command entered.
+timeout 3 /nobreak > nul
+goto ggroupsunlocked
+
+:TAAunlocked
+cls
+
+set lines=18
+
+set "line1=[ Recent chat activiy from #talk-about-anything ]"
+set "line2=--------------------------------------------------"
+set "line3=                  Lmao nice one -dr. thiccums"
+set "line4=                            Thanks -mike65893"
+set "line5=[ Delusionaldrawsss has joined ]"
+set "line6=                   Hey guys -Delsuinaldrawsss"
+set "line7=           Hello, Delsuinaldrawsss -mike65893"
+set "line8=           Sup Delsuinaldrawsss -dr. thiccums"
+set "line9=          I have a question -Delsuinaldrawsss"
+set "line10=Yeah what is it, Delsuinaldrawsss -dr. thiccums"
+set "line11=          Whenever I launch superhot I get"
+set "line12=error 303;. Why do I get that -Delsuinaldrawsss"
+set "line13=Missing a certain file. Lemme send it -dr. thiccums"
+set "line14=                        Ok -Delsuinaldrawsss"
+set "line15=[ dr. thiccums has sent Delsuinaldrawsss 1 file ]"
+set "line16=      Thanks, dr. thiccums -Delsuinaldrawsss"
+set "line17= No problem, Delsuinaldrawsss -dr. thiccums"
+set "line18= [ You've been kicked from #talk-about-anything ]"
+
+
+for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
+
+for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
+timeout 4 /nobreak > nul
+goto main
+
+:type4
+set "letter=!line:~%num%,1!"
+set "delay=%random%%random%%random%%random%%random%%random%%random%"
+set "delay=%delay:~-6%"
+if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
 
 :shuttingdown
 title --- xIOS -- By: Theta --------
@@ -517,7 +716,7 @@ for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 timeout 5 /nobreak > nul
 exit
 
-:type4
+:type5
 set "letter=!line:~%num%,1!"
 set "delay=%random%%random%%random%%random%%random%%random%%random%"
 set "delay=%delay:~-6%"

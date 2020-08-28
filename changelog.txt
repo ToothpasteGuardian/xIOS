@@ -14,8 +14,6 @@ Changelog v1.2
 
 -changed directory "games" to "applications"
 
-- LATEST VERSION OF XIOS -
-
 Changelog v1.3
 
 -fixed leave command to "ggroups"
@@ -25,4 +23,16 @@ Changelog v1.3
 -added special command that goes to special place
 
 -removed "Pausing visual display systems..." in shutdown area
+
+- LATEST VERSION OF XIOS -
+
+Changelog v1.4
+
+-added "GGROUPS.VODS"
+
+-added "GGROUPS.DOWNLOAD.CHATA.VODS"
+
+-updated special area
+
+-updated ggroups
 
