@@ -1,0 +1,17 @@
+- OLDER VERSIONS OF XIOS ( NOT AVAILABLE ) -
+
+Changelog v1.0
+
+-Added secret
+
+Changelog v1.1
+
+-removed secret
+
+- LATEST VERSION OF XIOS -
+
+Changelog v1.2
+
+-added "ggroups"
+
+-changed directory "games" to "applications"
