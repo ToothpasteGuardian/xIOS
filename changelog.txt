@@ -8,10 +8,21 @@ Changelog v1.1
 
 -removed secret
 
-- LATEST VERSION OF XIOS -
-
 Changelog v1.2
 
 -added "ggroups"
 
 -changed directory "games" to "applications"
+
+- LATEST VERSION OF XIOS -
+
+Changelog v1.3
+
+-fixed leave command to "ggroups"
+
+-improved error message in the #talk-about-anything chatroom in "ggroups"
+
+-added special command that goes to special place
+
+-removed "Pausing visual display systems..." in shutdown area
+

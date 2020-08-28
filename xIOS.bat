@@ -2,6 +2,8 @@
 setlocal enableextensions enabledelayedexpansion
 
 :bootupB
+title --- xIOS -- By: Theta --------
+cls
 set lines=7
 
 set "line1=Initializing xIOS v4.2.29p"
@@ -18,7 +20,7 @@ for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 
 echo.
-echo Starting visual display "LOGO.VODS"
+echo Starting "LOGO.VODS"
 timeout 4 /nobreak > nul
 goto :screen
 
@@ -32,6 +34,65 @@ for /L %%b in (1,6,%delay%) do rem
 if "%letter%"=="" echo.&goto :EOF
 set /a num+=1
 goto type
+
+:debug_map
+title Debug map 
+cls
+echo The command you've entered at "MAIN.VODS" has led you here.
+echo If you didn't search through the code to get this, you're lucky!
+echo In this area you can access all available areas. Choose wisely!
+echo.
+echo Area1 : bootupB
+echo Area2 : screen
+echo Area3 : main
+echo Area4: dir_apps
+echo Area5 : superhotloading
+echo Area6 : superhot
+echo Area7 : ggroupsloading
+echo Area8 : ggroups
+echo Area9 : TAA
+echo Area10 : shuttingdown
+echo.
+echo That's all the areas I have currently created.
+echo Now type out the area you want to go to.
+
+set /p areagoto=
+
+if "%areagoto%" == "Area1" (
+     goto bootupB
+)
+if "%areagoto%" == "Area2"  (
+     goto screen
+)
+if "%areagoto%" == "Area3" (
+     goto main
+)
+if "%areagoto%" == "Area4" (
+     goto dir_apps
+)
+if "%areagoto%" == "Area5" (
+     goto superhotloading
+)
+if "%areagoto%" == "Area6" (
+     goto superhot
+)
+if "%areagoto%" == "Area7" (
+     goto ggroupsloading
+)
+if "%areagoto%" == "Area8" (
+     goto ggroups
+)
+if "%areagoto%" == "Area9" (
+     goto TAA
+)
+if "%areagoto%" == "Area10" (
+     goto shuttingdown
+)
+
+@REM No valid command entered.
+@echo No valid command entered.
+timeout 3 /nobreak > nul 
+goto debug_map
 
 :screen
 title --- xIOS -- By: Theta --------
@@ -135,6 +196,15 @@ if "%changedir%" == "shutdown" (
 	 ping localhost -n 3 >nul
      goto shuttingdown
 )
+if "%changedir%" == "specialdebug404515" (
+     echo.
+	 echo Paramter "changedir"
+	 echo is causing errors in "CONSOLE.VODS"
+	 echo Warning the command you've entered is causing floods
+	 echo Just kidding...
+	 ping localhost -n 10 >nul
+	 goto debug_map
+)
 
 @REM No valid command entered.
 @echo No valid command entered.
@@ -144,7 +214,7 @@ goto main
 :superhotloading
 title Checking "SUPERHOT"
 cls
-set lines=7
+set lines=6
 
 set "line1=Initializing file safety check"
 set "line2=-------------------------------"
@@ -250,7 +320,7 @@ goto dir_apps
 :ggroupsloading
 title Checking "ggroups"
 cls
-set lines=7
+set lines=6
 
 set "line1=Initializing file safety check"
 set "line2=-------------------------------"
@@ -365,8 +435,8 @@ if "%chatroom%" == "hacking" (
 )
 if "%chatroom%" == "leave" (
      echo.
-	 echo Closing ("ggroups")...
-	 ping localhost -n 3 >nul
+	 echo Closing "ggroups"...
+     ping localhost -n 5 >nul
 	 goto dir_apps
 )
 
@@ -389,7 +459,7 @@ set "line6=                   Hey guys -Delsuinaldrawsss"
 set "line7=           Hello, Delsuinaldrawsss -mike65893"
 set "line8=           Sup Delsuinaldrawsss -dr. thiccums"
 set "line9=          I have a question -Delsuinaldrawsss"
-set "line10= --- PAUSE ---"
+set "line10= [ Pausing ]"
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
@@ -410,7 +480,7 @@ echo And if you attempt to join again
 echo the recent chat activiy will repeat
 echo and you'll get this same error message.
 echo.
-ping localhost -n 12 >nul
+ping localhost -n 14 >nul
 goto ggroups
 
 :type3
@@ -428,17 +498,16 @@ goto type
 title --- xIOS -- By: Theta --------
 cls
 
-set lines=9
+set lines=8
 
 set "line1=Shutting down xIOS v4.2.29p"
-set "line2=[-------------------------"
+set "line2=----------------------------"
 set "line3=Closing all exectubales: Done."
 set "line4=Shutting off cooler fan: Done."
 set "line5=Disabling disk eject button: Done."
 set "line6=Disabling all keyboard keys: Done."
 set "line7=Closing all misc operations: Done."
-set "line8=Pausing visual display system in 3 seconds..."
-set "line9=Shutting off xIOS in 6 seconds...."
+set "line8=Shutting down xIOS in 6 seconds...."
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
