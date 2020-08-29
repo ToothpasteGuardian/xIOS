@@ -34,8 +34,6 @@ Changelog v1.4
 
 -updated ggroups
 
---------- LATEST VERSION OF XIOS ---------
-
 Changelog v1.5
 
 -added new directory "art" which includes one piece of ASCII art.
@@ -44,3 +42,13 @@ Changelog v1.5
 
 -improved shutdown screen for xIOS
 
+Changelog v1.6
+
+-improved shutdown screen
+
+-improved bootup screen
+
+-improved ggroups "talk-about-anything" chatroom
+
+-added optional background noise at the bootup screen then removed it due to multiple issues.
+hopefully I'll add it back in in a later version without any issues. :(

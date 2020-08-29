@@ -1,18 +1,22 @@
 @echo off
 setlocal enableextensions enabledelayedexpansion
 
+
+
 :bootupB
+
 title --- xIOS -- By: Theta --------
 cls
-set lines=7
+set lines=8
 
 set "line1=Initializing xIOS v4.2.29p"
-set "line2=---------------------------"
+set "line2= "
 set "line3=Disk check: Ok."
 set "line4=Memory check: Ok."
-set "line5=VR Gear check: None."
-set "line6=Network check: Ok."
-set "line7=Overall system check: Ok."
+set "line5=Cooler fan check: Ok."
+set "line6=VR Gear check: None."
+set "line7=Network check: Ok."
+set "line8=Overall system check: Ok."
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
@@ -20,9 +24,9 @@ for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 
 echo.
-echo Starting "LOGO.VODS"
-timeout 4 /nobreak > nul
-goto :screen
+echo Starting .VOD "LOGO"
+ping localhost -n 4 >nul
+goto screen
 
 :type
 set "letter=!line:~%num%,1!"
@@ -123,6 +127,16 @@ echo.
 echo.
 echo.
 echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
 echo                   IIIIIIIIIIII     OOOOOOOOO         SSSSSSSSSSSSSSS 
 ping localhost -n 2 >nul
 echo                   I::::::::::I   OO:::::::::OO     SS:::::::::::::::S
@@ -149,14 +163,15 @@ echo x:::::x    x:::::x I::::::::I    OO:::::::::OO    S:::::::::::::::SS
 echo xxxxxxx     xxxxxx IIIIIIIIII      OOOOOOOOO       SSSSSSSSSSSSSSS 
 echo.
 echo.
+ping localhost -n 3 >nul
 echo.
 echo      "Most powerful operating system of the future (TM)"
 echo.
 echo.
-ping localhost -n 4 >nul
+ping localhost -n 5 >nul
 echo Launching file commander
 echo.
-ping localhost -n 4 >nul
+ping localhost -n 2 >nul
 goto main
 
 :main
@@ -611,18 +626,25 @@ goto ggroupsunlocked
 :TAA
 cls
 
-set lines=10
+set lines=18
 
 set "line1=[ Recent chat activiy from #talk-about-anything ]"
-set "line2=--------------------------------------------------"
-set "line3=                  Lmao nice one -dr. thiccums"
-set "line4=                            Thanks -mike65893"
-set "line5=[ Delusionaldrawsss has joined ]"
-set "line6=                   Hey guys -Delsuinaldrawsss"
-set "line7=           Hello, Delsuinaldrawsss -mike65893"
-set "line8=           Sup Delsuinaldrawsss -dr. thiccums"
-set "line9=          I have a question -Delsuinaldrawsss"
-set "line10= [ Pausing ]"
+set "line2= "
+set "line3= "
+set "line4=                  Lmao nice one -dr. thiccums"
+set "line5= "
+set "line6=                            Thanks -mike65893"
+set "line7= "
+set "line8=[ Delusionaldrawsss has joined ]"
+set "line9= "
+set "line10=                   Hey guys -Delsuinaldrawsss"
+set "line11= "
+set "line12=           Hello, Delsuinaldrawsss -mike65893"
+set "line13=" 
+set "line14=           Sup Delsuinaldrawsss -dr. thiccums"
+set "line15= "
+set "line16=          I have a question -Delsuinaldrawsss"
+set "line17= [ PAUSED ]"
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
@@ -760,26 +782,43 @@ goto ggroupsunlocked
 :TAAunlocked
 cls
 
-set lines=18
+set lines=35
 
 set "line1=[ Recent chat activiy from #talk-about-anything ]"
-set "line2=--------------------------------------------------"
-set "line3=                  Lmao nice one -dr. thiccums"
-set "line4=                            Thanks -mike65893"
-set "line5=[ Delusionaldrawsss has joined ]"
-set "line6=                   Hey guys -Delsuinaldrawsss"
-set "line7=           Hello, Delsuinaldrawsss -mike65893"
-set "line8=           Sup Delsuinaldrawsss -dr. thiccums"
-set "line9=          I have a question -Delsuinaldrawsss"
-set "line10=Yeah what is it, Delsuinaldrawsss -dr. thiccums"
-set "line11=          Whenever I launch superhot I get"
-set "line12=error 303;. Why do I get that -Delsuinaldrawsss"
-set "line13=Missing a certain file. Lemme send it -dr. thiccums"
-set "line14=                        Ok -Delsuinaldrawsss"
-set "line15=[ dr. thiccums has sent Delsuinaldrawsss 1 file ]"
-set "line16=      Thanks, dr. thiccums -Delsuinaldrawsss"
-set "line17= No problem, Delsuinaldrawsss -dr. thiccums"
-set "line18= [ You've been kicked from #talk-about-anything ]"
+set "line2= "
+set "line3= "
+set "line4=                  Lmao nice one -dr. thiccums"
+set "line5= "
+set "line6=                            Thanks -mike65893"
+set "line7= "
+set "line8=[ Delusionaldrawsss has joined ]"
+set "line9= "
+set "line10=                   Hey guys -Delsuinaldrawsss"
+set "line11= "
+set "line12=           Hello, Delsuinaldrawsss -mike65893"
+set "line13= "
+set "line14=           Sup Delsuinaldrawsss -dr. thiccums"
+set "line15= "
+set "line16=          I have a question -Delsuinaldrawsss"
+set "line17= "
+set "line18=Yeah what is it, Delsuinaldrawsss -dr. thiccums"
+set "line19= "
+set "line20=          Whenever I launch superhot I get"
+set "line21=error 303;. Why do I get that -Delsuinaldrawsss"
+set "line22= "
+set "line23=Missing a certain file. Lemme send it -dr. thiccums"
+set "line24= "
+set "line25=                        Ok -Delsuinaldrawsss"
+set "line26= "
+set "line27=[ dr. thiccums has sent Delsuinaldrawsss 1 file ]"
+set "line28= "
+set "line29=      Thanks, dr. thiccums -Delsuinaldrawsss"
+set "line30= "
+set "line31= No problem, Delsuinaldrawsss -dr. thiccums"
+set "line32= "
+set "line33= [ CLEARING ALL INACTIVE USERS ]"
+set "line34= "
+set "line35= [ You've been kicked from #talk-about-anything ]"
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
@@ -802,21 +841,21 @@ cls
 set lines=9
 
 set "line1=Shutting down xIOS v4.2.29p"
-set "line2=----------------------------"
+set "line2= "
 set "line3=Closing all exectubales: Done."
 set "line4=Shutting off cooler fan: Done."
 set "line5=Disabling disk eject button: Done."
 set "line6=Disabling all keyboard keys: Done."
 set "line7=Closing all misc operations: Done."
 set "line8=Disconnecting from the network: Done."
-set "line9=Shutting down xIOS in 6 seconds...."
+set "line9=Shutting down xIOS...."
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 
-timeout 5 /nobreak > nul
+timeout 4 /nobreak > nul
 exit
 
 :type5
