@@ -175,8 +175,8 @@ echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
-echo I             I            I                I
-echo IAPPS         I   FOLDER   I                I
+echo I ART         I   FOLDER   I                I
+echo I APPS        I   FOLDER   I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
@@ -185,7 +185,7 @@ echo I             I            I                I
 echo I_____________I____________I________________I
 echo I                                           I
 echo I C:\                                       I
-echo I______________________Omni__xIOS_4.2.00p___I
+echo I______________________Omni__xIOS_4.2.29p___I
 echo.
 
 set /p changedir=command:
@@ -207,6 +207,12 @@ if "%changedir%" == "shutdown" (
 	 echo Transforing visual display to "SHUTDOWN.VODS"
 	 ping localhost -n 3 >nul
      goto shuttingdown
+)
+if "%changedir%" == "change dir art" (
+     echo.
+     echo Changing directory...
+	 ping localhost -n 2 >nul
+     goto dir_art
 )
 if "%changedir%" == "specialdebug404515" (
      echo.
@@ -276,6 +282,102 @@ echo.
 ping localhost -n 3 >nul
 goto main
 
+:dir_art
+title --- xIOS -- By: Theta --------
+cls
+echo.
+echo  ____________________________________________
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I-------------I------------I                I
+echo I             I            I                I
+echo I Art1        I   jpeg     I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I_____________I____________I________________I
+echo I                                           I
+echo I C:\ART\                                   I
+echo I______________________Omni__xIOS_4.2.29p___I
+echo.
+
+set /p art=command:
+
+if "%art%" == "open art1" (
+     echo.
+	 echo Opening "Art1.jpeg"
+	 ping localhost -n 2 >nul
+	 goto art1jpeg
+)
+if "%art%" == "go back" (
+     goto main
+)
+if "%art%" == "shutdown" (
+     echo.
+	 echo Transforing visual display to "SHUTDOWN.VODS"
+	 ping localhost -n 3 >nul
+     goto shuttingdown
+)
+
+@REM No valid command entered.
+@echo No valid command entered.
+timeout 3 /nobreak > nul
+goto dir_art
+
+:art1jpeg
+title --- Art1 -- by: dr. thiccums --------
+cls
+echo ______________________________________________________________________
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                                                                    I
+echo I                --------------------------]                         I
+echo I                                                                    I
+echo I         ______                                                     I
+echo I        I      I                                                    I
+echo I        I      I                                                    I
+echo I        I_    _I                                                    I
+echo I  ________I  I____________________--------  ----------------------] I
+echo I I                                  _____I                          I
+echo I I                 ________________I                                I
+echo I I   II           I                                                 I
+echo I I   II           I                                                 I
+echo I I   II           I                                                 I
+echo I I   II           I                                                 I
+echo I I   II           I                                                 I
+echo I I   II           I            ---------------------]               I
+echo I I   II           I                                                 I
+echo I I___II   _____   I                                                 I
+echo I      I  I     I  I                                                 I
+echo I      I  I     I  I                                                 I      
+echo I      I  I     I  I                                                 I
+echo I      I  I     I  I                                                 I
+echo I      I  I     I  I                                                 I
+echo I      I  I     I  I                                                 I
+echo I------I  I-----I  I-------------------------------------------------I
+echo I      I  I---I I  I---I                                             I
+echo I      I______I I______I                                             I
+echo I                                                                    I
+echo I                                                                    I
+echo I____________________________________________________________________I
+pause
+goto dir_art
 
 :dir_apps
 title --- xIOS -- By: Theta --------
@@ -697,7 +799,7 @@ if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
 title --- xIOS -- By: Theta --------
 cls
 
-set lines=8
+set lines=9
 
 set "line1=Shutting down xIOS v4.2.29p"
 set "line2=----------------------------"
@@ -706,7 +808,8 @@ set "line4=Shutting off cooler fan: Done."
 set "line5=Disabling disk eject button: Done."
 set "line6=Disabling all keyboard keys: Done."
 set "line7=Closing all misc operations: Done."
-set "line8=Shutting down xIOS in 6 seconds...."
+set "line8=Disconnecting from the network: Done."
+set "line9=Shutting down xIOS in 6 seconds...."
 
 
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
