@@ -52,3 +52,10 @@ Changelog v1.6
 
 -added optional background noise at the bootup screen then removed it due to multiple issues.
 hopefully I'll add it back in in a later version without any issues. :(
+
+--- CURRENT VERSION ---
+
+Changelog v1.7
+
+-Created folder that holds stuff I might use in the next version. Other than that
+I don't remember what I actually worked on to improve xIOS. Apologies.

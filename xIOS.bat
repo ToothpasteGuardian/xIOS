@@ -4,7 +4,7 @@ setlocal enableextensions enabledelayedexpansion
 
 
 :bootupB
-
+color 0F
 title --- xIOS -- By: Theta --------
 cls
 set lines=8
@@ -34,7 +34,7 @@ set "delay=%random%%random%%random%%random%%random%%random%%random%"
 set "delay=%delay:~-6%"
 if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
 
-for /L %%b in (1,6,%delay%) do rem
+for /L %%b in (1,4,%delay%) do rem
 if "%letter%"=="" echo.&goto :EOF
 set /a num+=1
 goto type
@@ -59,6 +59,8 @@ echo Area10 : shuttingdown
 echo Area11 : console
 echo Area12 : ggroupsunlocked
 echo Area13 : TAAunlocked
+echo CORE : SYSTEM
+echo CORE1011 : MIND
 echo.
 echo That's all the areas I have currently created.
 echo Now type out the area you want to go to.
@@ -103,6 +105,20 @@ if "%areagoto%" == "Area12" (
 )
 if "%areagoto%" == "Area13" (
      goto TAAunlocked
+)
+if "%areagoto%" == "CORE" (
+     color 0C
+     echo.
+	 echo AS YOU WISH
+	 ping localhost -n 3 >nul
+     goto system
+)
+if "%areagoto%" == "CORE1011" (
+     color 0C
+     echo.
+	 echo AS YOU WISH
+	 ping localhost -n 3 >nul
+     goto system6
 )
 
 @REM No valid command entered.
@@ -168,17 +184,17 @@ echo.
 echo      "Most powerful operating system of the future (TM)"
 echo.
 echo.
-ping localhost -n 5 >nul
+ping localhost -n 2 >nul
 echo Launching file commander
 echo.
-ping localhost -n 2 >nul
+ping localhost -n 3 >nul
 goto main
 
 :main
 title --- xIOS -- By: Theta --------
 cls
 echo.
-echo  ____________________________________________
+echo _____________________________________________
 echo I             I            I                I
 echo Isuperhot.exe I EXE        I                I
 echo I             I            I                I
@@ -219,7 +235,7 @@ if "%changedir%" == "launch superhot" (
 )
 if "%changedir%" == "shutdown" (
      echo.
-	 echo Transforing visual display to "SHUTDOWN.VODS"
+	 echo Transforing visual display to "SHUTDOWN.VOD"
 	 ping localhost -n 3 >nul
      goto shuttingdown
 )
@@ -230,12 +246,6 @@ if "%changedir%" == "change dir art" (
      goto dir_art
 )
 if "%changedir%" == "specialdebug404515" (
-     echo.
-	 echo Paramter "changedir"
-	 echo is causing errors in "CONSOLE.VODS"
-	 echo Warning the command you've entered is causing floods
-	 echo Just kidding...
-	 ping localhost -n 10 >nul
 	 goto debug_map
 )
 
@@ -250,16 +260,20 @@ cls
 set lines=6
 
 set "line1=Initializing file safety check"
-set "line2=-------------------------------"
+set "line2= "
 set "line3=Visible viruses: None."
 set "line4=Hidden Viruses: None."
 set "line5=Network connection required: Possible."
 set "line6=Overall file check: Could be harmful."
 
-
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
+ping localhost -n 2 >nul
+goto superhotloading2
+
+:superhotloading2
 
 echo.
 echo Continue (y/n)?
@@ -276,6 +290,7 @@ if "%SHanswer%" == "n" (
 @REM No valid command entered.
 @echo No valid command entered.
 timeout 3 /nobreak > nul
+goto superhotloading2
 
 :type2
 set "letter=!line:~%num%,1!"
@@ -292,9 +307,10 @@ goto main
 title --- SUPERHOT --------
 cls
 echo.
-echo ERROR 303;
+echo In the next version, SUPERHOT will be playable and not just a message
+echo that has nothing to offer other than knowledge.
 echo.
-ping localhost -n 3 >nul
+pause>nul
 goto main
 
 :dir_art
@@ -309,7 +325,7 @@ echo I             I            I                I
 echo I-------------I------------I                I
 echo I             I            I                I
 echo I Art1        I   jpeg     I                I
-echo I             I            I                I
+echo I Art2        I   jpeg     I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
@@ -334,6 +350,12 @@ if "%art%" == "open art1" (
 	 ping localhost -n 2 >nul
 	 goto art1jpeg
 )
+if "%art%" == "open art2" (
+     echo.
+	 echo Opening "Art2.jpeg"
+	 ping localhost -n 2 >nul
+	 goto yourarthere
+)
 if "%art%" == "go back" (
      goto main
 )
@@ -355,20 +377,13 @@ cls
 echo ______________________________________________________________________
 echo I                                                                    I
 echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
-echo I                                                                    I
 echo I                --------------------------]                         I
 echo I                                                                    I
 echo I         ______                                                     I
 echo I        I      I                                                    I
 echo I        I      I                                                    I
 echo I        I_    _I                                                    I
-echo I  ________I  I____________________--------  ----------------------] I
+echo I  ________I  I____________________--------] ----------------------] I
 echo I I                                  _____I                          I
 echo I I                 ________________I                                I
 echo I I   II           I                                                 I
@@ -389,9 +404,16 @@ echo I------I  I-----I  I-------------------------------------------------I
 echo I      I  I---I I  I---I                                             I
 echo I      I______I I______I                                             I
 echo I                                                                    I
-echo I                                                                    I
 echo I____________________________________________________________________I
-pause
+pause>nul
+goto dir_art
+
+:yourarthere
+cls
+echo.
+echo Send your ASCII art to me on Discord! Toothpaste Guardian#6796
+echo.
+pause>nul
 goto dir_art
 
 :dir_apps
@@ -452,16 +474,20 @@ cls
 set lines=6
 
 set "line1=Initializing file safety check"
-set "line2=-------------------------------"
+set "line2= "
 set "line3=Visible viruses: None."
 set "line4=Hidden Viruses: None."
 set "line5=Network connection required: Yes."
 set "line6=Overall file check: Safe."
 
-
 for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
+ping localhost -n 3 >nul
+goto ggroupsloading2
+
+:ggroupsloading2
 
 echo.
 echo Continue (y/n)?
@@ -476,8 +502,9 @@ if "%SHanswer%" == "n" (
 )
 
 @REM No valid answer chosen.
-@echo No valid answer chosen.
+@echo No valid command entered.
 timeout 3 /nobreak > nul
+goto ggroupsloading2
 
 :ggroups
 title --- Ggroups -- Chatting application --------
@@ -609,7 +636,7 @@ if "%answerconsole%" == "go back" (
 )
 
 @REM No valid answer chosen.
-@echo No valid answer chosen.
+@echo No valid command entered.
 timeout 3 /nobreak > nul
 goto console
 
@@ -617,16 +644,20 @@ goto console
 cls
 echo Downloading chat assistant v3.0.1
 ping localhost -n 3 >nul
-echo Download finished.
+echo forwarding chat assistant v3.0.1 to "ggroups"
+ping localhost -n 3 >nul
+echo installing chat assistant v3.0.1
+ping localhost -n 3 >nul
+echo Installation finished
 echo Transfering visual display to
-echo "GGROUPS.VODS"
+echo "GGROUPS.VOD"
 ping localhost -n 3 >nul
 goto ggroupsunlocked
 
 :TAA
 cls
 
-set lines=18
+set lines=17
 
 set "line1=[ Recent chat activiy from #talk-about-anything ]"
 set "line2= "
@@ -640,7 +671,7 @@ set "line9= "
 set "line10=                   Hey guys -Delsuinaldrawsss"
 set "line11= "
 set "line12=           Hello, Delsuinaldrawsss -mike65893"
-set "line13=" 
+set "line13= " 
 set "line14=           Sup Delsuinaldrawsss -dr. thiccums"
 set "line15= "
 set "line16=          I have a question -Delsuinaldrawsss"
@@ -697,7 +728,6 @@ echo.
 echo #pets -CLOSED-
 echo.
 echo #hacking -CLOSED-
-echo.
 echo.
 echo - To be made -
 echo.
@@ -868,3 +898,211 @@ for /L %%b in (1,5,%delay%) do rem
 if "%letter%"=="" echo.&goto :EOF
 set /a num+=1
 goto type
+
+:system
+@echo off
+color 0F
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING.
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I           I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 3 >nul
+goto system2
+
+:system2
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING..
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I           I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 3 >nul
+goto system3
+
+:system3
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING...
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I           I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 3 >nul
+goto system4
+
+:system4
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING.
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I           I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 4 >nul
+goto system5
+
+:system5
+title ------
+cls
+
+set lines=1
+
+set "line1=THE SYSTEM"
+
+
+for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
+
+for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
+timeout 4 /nobreak > nul
+goto main
+
+:system5a
+set "letter=!line:~%num%,1!"
+set "delay=%random%%random%%random%%random%%random%%random%%random%"
+set "delay=%delay:~-6%"
+if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
+
+for /L %%b in (1,1,%delay%) do rem
+if "%letter%"=="" echo.&goto :EOF
+set /a num+=1
+goto type
+
+:system6
+title ------
+cls
+
+set lines=1
+
+set "line1=WILL SET"
+
+
+for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
+
+for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
+timeout 4 /nobreak > nul
+goto system7
+
+:system6a
+set "letter=!line:~%num%,1!"
+set "delay=%random%%random%%random%%random%%random%%random%%random%"
+set "delay=%delay:~-6%"
+if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
+
+for /L %%b in (1,1,%delay%) do rem
+if "%letter%"=="" echo.&goto :EOF
+set /a num+=1
+goto type
+
+:system7
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING.
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I011        I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 4 >nul
+goto system8
+
+:system8
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING..
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I01101111000I
+echo  (  `-,_..`., )-- '_,)              I           I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 4 >nul
+goto system9
+
+:system9
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING...
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I01101111000I
+echo  (  `-,_..`., )-- '_,)              I100011     I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 4 >nul
+goto system10
+
+:system10
+title -- THE CORE --
+cls
+echo.
+echo   
+echo       _---~~(~~-_.                  UPLOADING.
+echo     _{        )   )                 _____________
+echo   ,   ) -~~- ( ,-' )_               I01101111000I
+echo  (  `-,_..`., )-- '_,)              I10001101111I
+echo ( ` _)  (  -~( -_ `,  ]------------[I           I
+echo (_-  _  ~_-~~~~`,  ,' )             I           I
+echo   `~ -^(    __;-,((()))              I___________I
+echo         ~~~~ {_ -_(())
+echo                `\  }
+echo                  { }
+echo.
+ping localhost -n 4 >nul
+goto main
