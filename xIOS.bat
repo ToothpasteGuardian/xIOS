@@ -307,8 +307,7 @@ goto main
 title --- SUPERHOT --------
 cls
 echo.
-echo In the next version, SUPERHOT will be playable and not just a message
-echo that has nothing to offer other than knowledge.
+echo Soon enough you'll be able to actually play SUPERHOT
 echo.
 pause>nul
 goto main
