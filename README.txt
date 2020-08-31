@@ -1,12 +1,12 @@
 to open a "folder" type: change dir *FILE NAME HERE*
 
-to play a "game" type: launch *GAME NAME HERE*
+to play an "exe" type: launch *EXE NAME HERE*
 
 to go back type: go back
 
 to exit an "application" type: leave
 
-to open a peice of art type: open
+to open a peice a "jpg" type: open
 
 created by Theta. Don't edit the .batch and claim it to be yours.
 

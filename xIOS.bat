@@ -1,8 +1,6 @@
 @echo off
 setlocal enableextensions enabledelayedexpansion
 
-
-
 :bootupB
 color 0F
 title --- xIOS -- By: Theta --------
@@ -23,9 +21,29 @@ for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
 
 for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
 
-echo.
-echo Starting .VOD "LOGO"
-ping localhost -n 4 >nul
+ping localhost -n 2 >nul
+set lines=15
+
+set "line1= "
+set "line2= "
+set "line3= "
+set "line4= "
+set "line5= "
+set "line6= "
+set "line7= "
+set "line8= "
+set "line9= "
+set "line10= "
+set "line11= "
+set "line12= "
+set "line13= "
+set "line14= "
+set "line15= "
+
+for /f %%a in ('"prompt $H&for %%b in (1) do rem"') do set "BS=%%a"
+
+for /L %%a in (1,1,%lines%) do set num=0&set "line=!line%%a!"&call :type
+
 goto screen
 
 :type
@@ -34,7 +52,7 @@ set "delay=%random%%random%%random%%random%%random%%random%%random%"
 set "delay=%delay:~-6%"
 if not "%letter%"=="" set /p "=a%bs%%letter%" <nul
 
-for /L %%b in (1,4,%delay%) do rem
+for /L %%b in (1,6,%delay%) do rem
 if "%letter%"=="" echo.&goto :EOF
 set /a num+=1
 goto type
@@ -129,30 +147,6 @@ goto debug_map
 :screen
 title --- xIOS -- By: Theta --------
 echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
 echo                   IIIIIIIIIIII     OOOOOOOOO         SSSSSSSSSSSSSSS 
 ping localhost -n 2 >nul
 echo                   I::::::::::I   OO:::::::::OO     SS:::::::::::::::S
@@ -200,14 +194,14 @@ echo Isuperhot.exe I EXE        I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I-------------I------------I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
+echo I SPECIAL     I   FOLDER   I                I
 echo I ART         I   FOLDER   I                I
 echo I APPS        I   FOLDER   I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
@@ -227,6 +221,21 @@ if "%changedir%" == "change dir apps" (
 	 ping localhost -n 2 >nul
      goto dir_apps
 )
+if "%changedir%" == "change dir art" (
+     echo.
+     echo Changing directory...
+	 ping localhost -n 2 >nul
+     goto dir_art
+)
+if "%changedir%" == "change dir special" (
+     echo.
+     echo Changing directory...
+	 ping localhost -n 2 >nul
+     goto locked1
+)
+if "%changedir%" == "specialdebug404515" (
+	 goto debug_map
+)
 if "%changedir%" == "launch superhot" (
      echo.
      echo Launching SUPERHOT...
@@ -238,15 +247,6 @@ if "%changedir%" == "shutdown" (
 	 echo Transforing visual display to "SHUTDOWN.VOD"
 	 ping localhost -n 3 >nul
      goto shuttingdown
-)
-if "%changedir%" == "change dir art" (
-     echo.
-     echo Changing directory...
-	 ping localhost -n 2 >nul
-     goto dir_art
-)
-if "%changedir%" == "specialdebug404515" (
-	 goto debug_map
 )
 
 @REM No valid command entered.
@@ -307,9 +307,44 @@ goto main
 title --- SUPERHOT --------
 cls
 echo.
-echo Soon enough you'll be able to actually play SUPERHOT
+echo ----------------------
+echo [][][][][][][][][][][ - DOWNLOADING UPDATE 99%
+echo ----------------------
 echo.
 pause>nul
+goto main
+
+:locked1
+cls
+echo.
+echo -------------------
+set /p locked1=PASSWORD:
+echo -------------------
+echo.
+
+if "%locked1%" == "password" (
+     echo.
+	 echo.
+	 echo.
+	 echo --MESSAGE------------------
+	 echo Hahahahaha you're so funny
+	 echo literally shut the fuck up.
+	 echo ---------------------------
+	 echo.
+	 ping localhost -n 8 >nul
+	 goto locked1
+)
+
+goto locked1a
+
+:locked1a
+cls
+echo.
+echo -------------------------
+echo INVALID PASSWORD. QUITING.
+echo -------------------------
+echo.
+ping localhost -n 5 >nul
 goto main
 
 :dir_art
@@ -317,14 +352,14 @@ title --- xIOS -- By: Theta --------
 cls
 echo.
 echo  ____________________________________________
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I             I            I                I
-echo I-------------I------------I                I
-echo I             I            I                I
 echo I Art1        I   jpeg     I                I
 echo I Art2        I   jpeg     I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
+echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
 echo I             I            I                I
@@ -371,7 +406,7 @@ timeout 3 /nobreak > nul
 goto dir_art
 
 :art1jpeg
-title --- Art1 -- by: dr. thiccums --------
+title --- Red Dude -- by: dr. thiccums --------
 cls
 echo ______________________________________________________________________
 echo I                                                                    I
@@ -694,7 +729,7 @@ echo And if you attempt to join again
 echo the recent chat activiy will repeat
 echo and you'll get this same error message.
 echo.
-ping localhost -n 14 >nul
+ping localhost -n 16 >nul
 goto ggroups
 
 :type3
