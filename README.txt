@@ -16,3 +16,7 @@ I'm keeping the backgroundNoise.wav in the folder so you can hear what it was su
 in-game. Sadly I had to remove it. :(
 If you manage to get it to work perfectly without any issues you'll be listed as a contributor
 and your name will be put in ggroups as an easteregg. Have fun.
+
+Discord server invite link:
+
+https://discord.gg/W87nXvfjR3
